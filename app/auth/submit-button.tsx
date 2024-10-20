@@ -8,6 +8,7 @@ type Props = ComponentProps<"button"> & {
 };
 
 export function SubmitButton({ children, pendingText, ...props }: Props) {
+  //form送信中のデータを取得するフック
   const { pending, action } = useFormStatus();
 
   const isPending = pending && action === props.formAction;
